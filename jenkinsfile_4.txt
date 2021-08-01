@@ -1,0 +1,16 @@
+pipeline {
+    agent { docker { image "python:latest"} }
+    
+    
+    stages {
+        
+        /*stage('Initialize'){
+            def dockerHome = tool 'myDocker'
+            env.PATH = "${dockerHome}/bin:${env.PATH}"
+        }*/
+    
+        stage("Hello, world!") {
+            steps {
+                echo "Hello, world!"
+            }
+        }
